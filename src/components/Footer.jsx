@@ -9,15 +9,7 @@ export default function Footer() {
   return (
     <footer className="slp-footer">
       <div className="slp-shell">
-        <Reveal as="div" className="slp-footer-cta" sig>
-          <div>
-            <h2>Have a matter to discuss?</h2>
-            <p>Book a consultation and the right partner from our team will get back to you.</p>
-          </div>
-          <Link to="/contact" className="slp-btn-primary">
-            Get in touch <ArrowUpRight size={15} />
-          </Link>
-        </Reveal>
+    
 
         <div className="slp-footer-grid">
           <div>
