@@ -2,6 +2,7 @@ import React from "react";
 import Reveal from "../components/Reveal.jsx";
 import AnimatedWords from "../components/AnimatedWords.jsx";
 import { PARTNERS, ASSOCIATE_PARTNERS } from "../data/content.js";
+import TeamAvatar from "../components/TeamAvatar.jsx";
 
 export default function Team() {
   return (
@@ -23,18 +24,28 @@ export default function Team() {
           <p className="slp-team-group-label">Partners</p>
           {PARTNERS.map((m, i) => (
             <Reveal as="div" className="slp-team-item" key={m.name} delay={i * 90}>
-              <h3 className="slp-team-name">{m.name}</h3>
-              <div className="slp-team-role">{m.role}</div>
-              <p className="slp-team-bio">{m.bio}</p>
+              <div className="slp-team-row">
+                <TeamAvatar name={m.name} initials={m.initials} image={m.image} />
+                <div>
+                  <h3 className="slp-team-name">{m.name}</h3>
+                  <div className="slp-team-role">{m.role}</div>
+                  <p className="slp-team-bio">{m.bio}</p>
+                </div>
+              </div>
             </Reveal>
           ))}
 
           <p className="slp-team-group-label">Associate Partners</p>
           {ASSOCIATE_PARTNERS.map((m, i) => (
             <Reveal as="div" className="slp-team-item" key={m.name} delay={i * 90}>
-              <h3 className="slp-team-name">{m.name}</h3>
-              <div className="slp-team-role">{m.role}</div>
-              <p className="slp-team-bio">{m.bio}</p>
+              <div className="slp-team-row">
+                <TeamAvatar name={m.name} initials={m.initials} image={m.image} />
+                <div>
+                  <h3 className="slp-team-name">{m.name}</h3>
+                  <div className="slp-team-role">{m.role}</div>
+                  <p className="slp-team-bio">{m.bio}</p>
+                </div>
+              </div>
             </Reveal>
           ))}
         </div>

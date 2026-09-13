@@ -34,17 +34,6 @@ html, body, #root { height: 100%; }
 
 .slp-shell { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 28px; position: relative; }
 
-/* ---------- LOGO ---------- */
-.slp-post { stroke: #dcb75d; stroke-width: 2.4; }
-.slp-beam { stroke: #dcb75d; stroke-width: 2.4; stroke-linecap: round; transform-origin: 32px 16px; animation: slpBeam 1.6s cubic-bezier(.34,1.6,.4,1) 1; }
-.slp-chain { stroke: #dcb75d; stroke-width: 1.4; }
-.slp-pan { stroke: #dcb75d; stroke-width: 1.6; fill: none; }
-.slp-pan-left { transform-origin: 14px 16px; animation: slpPanL 1.6s cubic-bezier(.34,1.6,.4,1) 1; }
-.slp-pan-right { transform-origin: 50px 16px; animation: slpPanR 1.6s cubic-bezier(.34,1.6,.4,1) 1; }
-@keyframes slpBeam { 0% { transform: rotate(0deg); } 35% { transform: rotate(-9deg); } 70% { transform: rotate(5deg); } 100% { transform: rotate(0deg); } }
-@keyframes slpPanL { 0% { transform: translateY(0); } 35% { transform: translateY(6px); } 70% { transform: translateY(-3px); } 100% { transform: translateY(0); } }
-@keyframes slpPanR { 0% { transform: translateY(0); } 35% { transform: translateY(-6px); } 70% { transform: translateY(3px); } 100% { transform: translateY(0); } }
-
 /* ---------- NAV ---------- */
 .slp-nav {
   position: sticky; top: 0; z-index: 40;
@@ -271,3 +260,20 @@ html, body, #root { height: 100%; }
   .slp-root * { animation: none !important; transition: none !important; }
   .slp-reveal { opacity: 1 !important; transform: none !important; }
 }
+
+.slp-team-row { display: flex; gap: 28px; align-items: center; }
+@media (max-width: 560px) { .slp-team-row { flex-direction: column; gap: 16px; } }
+.slp-avatar {
+  flex-shrink: 0; width: 136px; height: 136px; border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--brass-light); box-shadow: 0 0 0 7px rgba(220,183,93,0.12);
+}
+@media (max-width: 780px) { .slp-avatar { width: 112px; height: 112px; } }
+@media (max-width: 560px) { .slp-avatar { width: 96px; height: 96px; } }
+.slp-avatar-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(160deg, var(--ink) 0%, var(--ink-soft) 100%);
+  color: var(--brass-light); font-family: var(--serif); font-size: 38px; font-weight: 460;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 780px) { .slp-avatar-placeholder { font-size: 32px; } }
+@media (max-width: 560px) { .slp-avatar-placeholder { font-size: 28px; } }
