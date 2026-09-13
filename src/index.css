@@ -262,7 +262,11 @@ html, body, #root { height: 100%; }
 }
 
 .slp-team-row { display: flex; gap: 28px; align-items: center; }
-@media (max-width: 560px) { .slp-team-row { flex-direction: column; gap: 16px; } }
+@media (max-width: 560px) {
+  .slp-team-row { flex-direction: column; gap: 16px; text-align: center; }
+  .slp-team-row > div:last-child { width: 100%; }
+  .slp-team-bio { text-align: left; }
+}
 .slp-avatar {
   flex-shrink: 0; width: 136px; height: 136px; border-radius: 50%; object-fit: cover;
   border: 3px solid var(--brass-light); box-shadow: 0 0 0 7px rgba(220,183,93,0.12);
