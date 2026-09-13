@@ -13,7 +13,6 @@ export default function Home() {
       <section className="slp-hero">
         <Watermark />
         <div className="slp-shell">
-          <p className="slp-eyebrow">Advocates &amp; Legal Consultants, Mumbai</p>
           <h1 className="slp-h1">
             <AnimatedWords text="Outcomes, not just representation." />
           </h1>
